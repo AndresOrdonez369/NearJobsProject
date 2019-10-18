@@ -5,7 +5,6 @@ import qs from 'qs';
 import {
   FETCH_JOBS,
   LIKE_JOB,
-  CLEAR_LIKED_JOBS
 } from '../../redux/types';
 
 const JOB_ROOT_URL = 'http://api.indeed.com/ads/apisearch?'; //NECESITAMOS ACTUALIZAR PUBLISHER ID
@@ -40,10 +39,6 @@ export const likeJob = (job) => {
     payload: job,
     type: LIKE_JOB
   };
-};
-
-export const clearLikedJobs = () => {
-  return { type: CLEAR_LIKED_JOBS };
 };
 
 //DEBEMOS MOVER LAS FUNCIONES POR SCREEN

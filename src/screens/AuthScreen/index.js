@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import { View, Text, AsyncStorage } from 'react-native';
 import { connect } from 'react-redux';
-import * as actions from '../actions';
+import { facebookLogin } from './actions';
 
 class AuthScreen extends Component {
   componentDidMount() {
-    this.props.facebookLogin();
+    this.props.FBLogin();
     this.onAuthComplete(this.props);
   }
 
@@ -30,4 +30,8 @@ function mapStateToProps({ auth }) {
   return { token: auth.token };
 }
 
-export default connect(mapStateToProps, actions)(AuthScreen);
+const mapDispatchToProps = {
+  FBLogin: facebookLogin
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(AuthScreen);

@@ -2,8 +2,8 @@ import _ from 'lodash';
 import React, { Component } from 'react';
 import { View, Text, AsyncStorage } from 'react-native';
 import { AppLoading } from 'expo';
-import Slides from '../components/Slides';
-
+import Slides from '../../components/Slides';
+// ubicar imagenes en las slides que ayuden a ver mejor la utilidad de la app 
 const SLIDE_DATA = [
   { text: 'Welcome to JobApp', color: '#03A9F4' },
   { text: 'Use this to get a job', color: '#009688' },
